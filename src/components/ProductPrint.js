@@ -2,7 +2,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 const ProductPrint = (props) => {
   const price = `$${props.price.toFixed()}`;
-  console.log(props);
+
   return (
     <div>
       <Container className="justify-content-center">

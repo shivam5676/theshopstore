@@ -1,15 +1,22 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import Header from "./components/Header";
+import { useState } from "react";
+import Header from "./components/Header/Header";
 import Product from "./components/Product";
+import Cart from "./components/Cart/Cart";
 
 
 
 function App() {
+ const[CartOpen,setCartOpen]= useState(false)
+ const onCartOpen=()=>{
+setCartOpen(true)
+ }
   return (
     <div>
-      <Header></Header>
+      {CartOpen?<Cart></Cart>:""}
+      <Header CartOpenHandler={onCartOpen}></Header>
       <Product ></Product>
 
     </div>

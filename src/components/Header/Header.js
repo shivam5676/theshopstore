@@ -1,6 +1,11 @@
 import { Container, Navbar } from "react-bootstrap";
+import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
+  const CartOpen=()=>{
+    props.CartOpenHandler();
+  }
+
   return (
     <Navbar bg="success" expand="sm" variant="dark" >
       {" "}
@@ -8,6 +13,7 @@ const Header = () => {
         {" "}
         <Navbar.Brand><h1>The GENERICS</h1> </Navbar.Brand>
       </Container>
+      <HeaderCartButton onClick={CartOpen}></HeaderCartButton>
     </Navbar>
   );
 };
