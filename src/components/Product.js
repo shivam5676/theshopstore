@@ -38,16 +38,18 @@ const Product = () => {
         "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
     },
   ];
-  
-  return(<div>
-    {productsArr.map((product) => (
-      <ProductPrint
-        key={Math.random()}
-        title={product.title}
-        price={product.price}
-        image={product.imageUrl}
-      ></ProductPrint>
-    ))}
-  </div>)
+
+  return (
+    <div>
+      {productsArr.map((product) => (
+        <ProductPrint
+          key={Math.random()}
+          title={product.title}
+          price={product.price}
+          image={product.imageUrl}
+        ></ProductPrint>
+      ))}
+    </div>
+  );
 };
 export default Product;
