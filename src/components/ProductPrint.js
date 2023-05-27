@@ -4,15 +4,16 @@ import CartContext from "../store/CartContext";
 
 const ProductPrint = (props) => {
   const price = `$${props.price.toFixed()}`;
-  const ctx = useContext(CartContext);
-  const additemhandler = (event) => {
-    event.preventDefault()
-    ctx.addItem({
-      title:props.title,
-      price:props.price,
-      quantity: 1,
-    });
-  };
+const ctx= useContext(CartContext)
+const additemhandler=()=>{
+  ctx.addItem({
+    id:props.id,
+    title:props.title,
+    quantity:1,
+    price:props.price,
+    image:props.image
+  })
+}
 
   return (
     <div>

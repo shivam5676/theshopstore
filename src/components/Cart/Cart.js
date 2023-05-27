@@ -1,51 +1,38 @@
+import { Fragment, useContext } from "react";
 import CartPrint from "../Cart/CartPrint";
+import CartContext from "../../store/CartContext";
+import { Button, Card } from "react-bootstrap";
 
-const Cart = () => {
-  const cartElements = [
-    {
-      title: "Colors",
+const Cart = (props) => {
+  const ctx = useContext(CartContext);
 
-      price: 100,
+  const newitem = ctx.items.map((cartitem) => (
+    <div key={cartitem.id} style={{ display: "flex" }}>
+      <img
+        src={cartitem.image}
+        style={{ width: "90px", padding: "10px" }}
+      ></img>
 
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-
-      quantity: 2,
-    },
-
-    {
-      title: "Black and white Colors",
-
-      price: 50,
-
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-
-      quantity: 3,
-    },
-
-    {
-      title: "Yellow and Black Colors",
-
-      price: 70,
-
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-
-      quantity: 1,
-    },
-  ];
-  return (
-    <div>
-      {cartElements.map((cartitem) => (
-        <CartPrint
-          images={cartitem.imageUrl}
-          price={cartitem.price}
-          title={cartitem.title}
-          quantity={cartitem.quantity}
-        ></CartPrint>
-      ))}
+      <h2 style={{ padding: "10px", width: "280px" }}>{cartitem.title}</h2>
+      <p style={{ padding: "10px", width: "100px" }}>{cartitem.price}</p>
+      <div>
+        <input
+          type="number"
+          value={cartitem.quantity}
+          style={{ width: "50px", margin: "00px 20px 0px 0px" }}
+        ></input>
+        <Button>remove</Button>
+      </div>
     </div>
+  ));
+  return (
+    <Fragment>
+      {" "}
+      <button onClick={props.cartCloseHandler} style={{ float: "right" }}>
+        close Cart
+      </button>
+      <CartPrint items={newitem}></CartPrint>
+    </Fragment>
   );
 };
 export default Cart;

@@ -12,14 +12,17 @@ function App() {
   const onCartOpen = () => {
     setCartOpen(true);
   };
+  const onCartClose=()=>{
+    setCartOpen(false)
+  }
   return (
-    <CartContextProvider>
+  
       <div>
-        {CartOpen ? <Cart></Cart> : ""}
+        {CartOpen ? <Cart cartCloseHandler={onCartClose}></Cart> : ""}
         <Header CartOpenHandler={onCartOpen}></Header>
         <Product></Product>
       </div>
-    </CartContextProvider>
+  
   );
 }
 

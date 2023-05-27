@@ -1,33 +1,28 @@
+import { useContext } from "react";
 import { Button, Card, Container } from "react-bootstrap";
+import CartContext from "../../store/CartContext";
 
 const CartPrint = (props) => {
-    const totalAmount=props.quantity*props.price;
+  const ctx = useContext(CartContext);
+  const totalAmount = `$${ctx.totalAmount.toFixed(2)}`;
   return (
     <div>
-      <Container>
-        <span>
-          <Card.Body>
-            <Card.Img
-              src={props.images}
-              alt="Beautiful flower"
-              style={{ width: "6rem", padding: "7px" }}
-            ></Card.Img>
-            <span style={{ padding: "35px" }}>
-              <span>{props.title}</span>
-            </span>
-            <span style={{ padding: "35px" }}>
-              <span>{props.price}</span>
-            </span>
+      <h1 style={{ textAlign: "center", marginTop: "50px" }}>CART</h1>
+      <div style={{ marginLeft:"300px",marginRight:"300px"}}>
+        <hr style={{ height:"2px", backgroundColor:"red" }} />
+      </div>
 
-            <span style={{ padding: "35px" }}>
-              <span style={{padding:"10px"}}>{props.quantity}</span>
-              <Button variant="danger" >REmove</Button>
-            </span>
-          </Card.Body>
-          
-        </span>
-      </Container>
-      
+      <div style={{ display: "flex", padding: "10px" }}>
+        <h3 style={{ padding: "10px 10px 0px 15px" }}> Item</h3>
+        <h3 style={{ padding: "10px 10px 0px 290px" }}>Price</h3>
+        <h3 style={{ padding: "10px 10px 0px 25px" }}>Quantity</h3>
+      </div>
+      <div>{props.items}</div>
+      <hr style={{height:"50px"}}></hr>
+      <h1 style={{ textAlign: "right" }}>
+        <b style={{ paddingRight: "10px" }}> Total </b>
+        {totalAmount}
+      </h1>
     </div>
   );
 };

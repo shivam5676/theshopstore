@@ -3,6 +3,7 @@ import ProductPrint from "./ProductPrint";
 const Product = () => {
   const productsArr = [
     {
+      id: 1,
       title: "Colors",
 
       price: 100,
@@ -12,6 +13,7 @@ const Product = () => {
     },
 
     {
+      id: 2,
       title: "Black and white Colors",
 
       price: 50,
@@ -21,6 +23,7 @@ const Product = () => {
     },
 
     {
+      id: 3,
       title: "Yellow and Black Colors",
 
       price: 70,
@@ -30,6 +33,7 @@ const Product = () => {
     },
 
     {
+      id: 4,
       title: "Blue Color",
 
       price: 100,
@@ -43,7 +47,8 @@ const Product = () => {
     <div>
       {productsArr.map((product) => (
         <ProductPrint
-          key={Math.random()}
+          key={product.id}
+          id={product.id}
           title={product.title}
           price={product.price}
           image={product.imageUrl}
