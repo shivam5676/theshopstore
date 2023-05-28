@@ -1,28 +1,19 @@
-// import logo from './logo.svg';
-// import './App.css';
+import About from "./components/pages/About";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./home";
+import { Nav } from "react-bootstrap";
+import Homepage from "./components/pages/Homepage";
 
-import { useState } from "react";
-import Header from "./components/Header/Header";
-import Product from "./components/Product";
-import Cart from "./components/Cart/Cart";
-import CartContextProvider from "./store/CartContextProvider";
-
+const router = createBrowserRouter([
+  { path: "/", element: <Home> </Home> },
+  { path: "/about", element: <About></About> },
+  { path: "/homepage", element: <Homepage></Homepage> }
+]);
 function App() {
-  const [CartOpen, setCartOpen] = useState(false);
-  const onCartOpen = () => {
-    setCartOpen(true);
-  };
-  const onCartClose=()=>{
-    setCartOpen(false)
-  }
   return (
-  
-      <div>
-        {CartOpen ? <Cart cartCloseHandler={onCartClose}></Cart> : ""}
-        <Header CartOpenHandler={onCartOpen}></Header>
-        <Product></Product>
-      </div>
-  
+    <div>
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   );
 }
 
