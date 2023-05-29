@@ -23,20 +23,24 @@ const HomepageTour = () => {
   ];
   const printlist = dummyTour.map((tour) => {
     return (
-      <div style={{ display: "flex"}} key={tour.id}>
-        <h3 style={{margin:"20px",width:"80px"}}>{tour.date}</h3>
-        <h6 style={{margin:"20px",width:"80px"}}>{tour.address}</h6>
-        <h6 style={{margin:"20px",width:"80px"}}>{tour.place}</h6>
-        <Button style={{margin:"20px",width:"110px"}}>Add Tickets</Button>
-        
-        
+      <div style={{ display: "flex" }} key={tour.id}>
+        <h3 style={{ margin: "20px", width: "80px" }}>{tour.date}</h3>
+        <h6 style={{ margin: "20px", width: "80px" }}>{tour.address}</h6>
+        <h6 style={{ margin: "20px", width: "80px" }}>{tour.place}</h6>
+        <Button style={{ margin: "20px", width: "110px" }}>Add Tickets</Button>
       </div>
     );
   });
-  return <div  style={{
-    paddingLeft: "20%",
-    marginBottom: "5px",
-    fontWeight: "bold",
-  }}>{printlist}</div>;
+  return (
+    <div
+      style={{
+        paddingLeft: "20%",
+        marginBottom: "5px",
+        fontWeight: "bold",
+      }}
+    >
+      {printlist}
+    </div>
+  );
 };
 export default HomepageTour;

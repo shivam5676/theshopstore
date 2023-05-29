@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import HomepageTour from "./HomepageTour";
+import HomepageTour from "../HomepageTour";
 
 const Homepage = () => {
   return (
@@ -8,7 +8,7 @@ const Homepage = () => {
       <Nav
         style={{
           backgroundColor: "black",
-          paddingLeft: "50%",
+          paddingLeft: "40%",
           marginBottom: "5px",
           fontWeight: "bold",
         }}
@@ -21,6 +21,9 @@ const Homepage = () => {
         </Nav.Link>
         <Nav.Link href="/about" style={{ color: "white" }}>
           About
+        </Nav.Link>
+        <Nav.Link href="/contact" style={{ color: "white" }}>
+          Contact
         </Nav.Link>
       </Nav>
       <Navbar bg="success" expand="sm" variant="dark">
