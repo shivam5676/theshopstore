@@ -1,31 +1,12 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import HomepageTour from "../HomepageTour";
+import TopHeader from "../Header/TopHeader";
 
 const Homepage = () => {
   return (
     <div>
       {" "}
-      <Nav
-        style={{
-          backgroundColor: "black",
-          paddingLeft: "40%",
-          marginBottom: "5px",
-          fontWeight: "bold",
-        }}
-      >
-        <Nav.Link href="/homepage" style={{ color: "white" }}>
-          Homepage
-        </Nav.Link>
-        <Nav.Link href="/" style={{ color: "white" }}>
-          store
-        </Nav.Link>
-        <Nav.Link href="/about" style={{ color: "white" }}>
-          About
-        </Nav.Link>
-        <Nav.Link href="/contact" style={{ color: "white" }}>
-          Contact
-        </Nav.Link>
-      </Nav>
+    <TopHeader></TopHeader>
       <Navbar bg="success" expand="sm" variant="dark">
         {" "}
         <Container className="justify-content-center">

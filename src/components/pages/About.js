@@ -1,39 +1,11 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import HeaderCartButton from "../Header/HeaderCartButton";
+import TopHeader from "../Header/TopHeader";
 
 const About = () => {
   return (
     <div>
-      <Nav
-        style={{
-          backgroundColor: "black",
-          paddingLeft: "40%",
-          marginBottom: "5px",
-          fontWeight: "bold",
-        }}
-      >
-        <Nav.Link href="/homepage" style={{ color: "white" }}>
-          Homepage
-        </Nav.Link>
-        <Nav.Link href="/" style={{ color: "white" }}>
-          store
-        </Nav.Link>
-        <Nav.Link href="/about" style={{ color: "white" }}>
-          About
-        </Nav.Link>
-        <Nav.Link href="/contact" style={{ color: "white" }}>
-          Contact
-        </Nav.Link>
-      </Nav>
-      <Navbar bg="success" expand="sm" variant="dark">
-        {" "}
-        <Container className="justify-content-center">
-          {" "}
-          <Navbar.Brand>
-            <h1>The GENERICS</h1>{" "}
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
+      <TopHeader></TopHeader>
       <h1 style={{ marginLeft: "50%",marginBottom:"20px" }}>ABOUT</h1>
       <div >
         <img

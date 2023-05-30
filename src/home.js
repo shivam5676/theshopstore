@@ -3,6 +3,7 @@ import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import Product from "./components/Product";
 import { Nav } from "react-bootstrap";
+import TopHeader from "./components/Header/TopHeader";
 
 const Home = () => {
   const [CartOpen, setCartOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
     <div>
      
       {CartOpen ? <Cart cartCloseHandler={onCartClose}></Cart> : ""}
+      <TopHeader></TopHeader>
       <Header CartOpenHandler={onCartOpen}></Header>
       <Product></Product>
     </div>

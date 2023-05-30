@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Alert, Container, Nav, Navbar } from "react-bootstrap";
+import TopHeader from "../Header/TopHeader";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -34,11 +35,9 @@ const Contact = () => {
     )
       .then((res) => {
         console.log(res);
-       
       })
       .catch(() => {
         console.log("error");
-    
       });
     setEmail("");
     setName("");
@@ -47,27 +46,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <Nav
-        style={{
-          backgroundColor: "black",
-          paddingLeft: "40%",
-          marginBottom: "5px",
-          fontWeight: "bold",
-        }}
-      >
-        <Nav.Link href="/homepage" style={{ color: "white" }}>
-          Homepage
-        </Nav.Link>
-        <Nav.Link href="/" style={{ color: "white" }}>
-          store
-        </Nav.Link>
-        <Nav.Link href="/about" style={{ color: "white" }}>
-          About
-        </Nav.Link>
-        <Nav.Link href="/contact" style={{ color: "white" }}>
-          Contact
-        </Nav.Link>
-      </Nav>
+      <TopHeader></TopHeader>
 
       <Navbar bg="success" expand="sm" variant="dark">
         {" "}
@@ -79,8 +58,7 @@ const Contact = () => {
         </Container>
       </Navbar>
 
-
-
+      <h1 style={{ marginLeft: "40%" }}>Contact page</h1>
 
       <Container
         style={{ backgroundColor: "yellow", width: "250px", marginTop: "20px" }}

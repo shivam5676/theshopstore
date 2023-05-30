@@ -9,7 +9,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Nav
+      {/* <Nav
         style={{
           backgroundColor: "black",
           paddingLeft: "40%",
@@ -29,7 +29,7 @@ const Header = (props) => {
         <Nav.Link href="/contact" style={{ color: "white" }}>
           Contact
         </Nav.Link>
-      </Nav>
+      </Nav> */}
 
       <Navbar bg="success" expand="sm" variant="dark">
         {" "}
@@ -39,7 +39,7 @@ const Header = (props) => {
             <h1>The GENERICS</h1>{" "}
           </Navbar.Brand>
         </Container>
-        {/* <HeaderCartButton onClick={CartOpen}></HeaderCartButton> */}
+        <HeaderCartButton onClick={CartOpen}></HeaderCartButton>
       </Navbar>
     </div>
   );
