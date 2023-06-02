@@ -24,6 +24,7 @@ const TopHeader = () => {
         <Nav.Link href="/about" style={{ color: "white" }}>
           About
         </Nav.Link>
+        <Nav.Link href="/auth" style={{ color: "white" }}>LoGin</Nav.Link>
         <Nav.Link href="/contact" style={{ color: "white" }}>
           Contact
         </Nav.Link>

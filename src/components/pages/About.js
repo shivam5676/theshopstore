@@ -1,5 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import HeaderCartButton from "../Header/HeaderCartButton";
+
 import TopHeader from "../Header/TopHeader";
 
 const About = () => {

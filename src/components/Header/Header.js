@@ -9,27 +9,7 @@ const Header = (props) => {
 
   return (
     <div>
-      {/* <Nav
-        style={{
-          backgroundColor: "black",
-          paddingLeft: "40%",
-          marginBottom: "5px",
-          fontWeight: "bold",
-        }}
-      >
-        <Nav.Link href="/homepage" style={{ color: "white" }}>
-          Homepage
-        </Nav.Link>
-        <Nav.Link href="/" style={{ color: "white" }}>
-          store
-        </Nav.Link>
-        <Nav.Link href="/about" style={{ color: "white" }}>
-          About
-        </Nav.Link>
-        <Nav.Link href="/contact" style={{ color: "white" }}>
-          Contact
-        </Nav.Link>
-      </Nav> */}
+     
 
       <Navbar bg="success" expand="sm" variant="dark">
         {" "}

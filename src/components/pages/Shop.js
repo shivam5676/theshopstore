@@ -32,16 +32,19 @@ const Shop = () => {
 
       <section>
         <Container style={{ height: "230px" }}>
-          
-            <Nav.Link href="/shop/iphone12">
-              <img
-                src="/iphone12/iphone12-2.jpg"
-                alt="iPhone 12"
-                style={{ width: "180px", height: "240px", float: "left",marginRight:"50px" }}
-              ></img>
-              <h3 style={{ margin: "15px" }}>iphone 12 pro 8/128 gb</h3>
-            </Nav.Link>
-          
+          <Nav.Link href="/shop/iphone12">
+            <img
+              src="/iphone12/iphone12-2.jpg"
+              alt="iPhone 12"
+              style={{
+                width: "180px",
+                height: "240px",
+                float: "left",
+                marginRight: "50px",
+              }}
+            ></img>
+            <h3 style={{ margin: "15px" }}>iphone 12 pro 8/128 gb</h3>
+          </Nav.Link>
         </Container>
         <hr></hr>
         <Container style={{ height: "250px" }}>
@@ -49,7 +52,12 @@ const Shop = () => {
             <img
               src="/iphone14/iphone14-3.jpg"
               alt="iPhone 14"
-              style={{ width: "180px", height: "240px", float: "left" ,marginRight:"50px"}}
+              style={{
+                width: "180px",
+                height: "240px",
+                float: "left",
+                marginRight: "50px",
+              }}
             ></img>
             <h3 style={{ margin: "15px" }}>iphone 14 pro 8/256 gb</h3>
           </Nav.Link>
@@ -60,9 +68,14 @@ const Shop = () => {
             <img
               src="/samsungs23/samsungs23-1.jpg"
               alt="iPhone 14"
-              style={{ width: "180px", height: "240px", float: "left" ,marginRight:"50px"}}
+              style={{
+                width: "180px",
+                height: "240px",
+                float: "left",
+                marginRight: "50px",
+              }}
             ></img>
-            <h3 style={{ margin: "15px" }}>samsung S23 12/256 gb</h3>
+            <h3 style={{ margin: "15px" }}>samsung S23 Ultra 12/256 gb</h3>
           </Nav.Link>
         </Container>
       </section>
