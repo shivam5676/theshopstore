@@ -14,28 +14,37 @@ import DataReciever from "./components/dataReciever";
 function App() {
   const authctx = useContext(AuthContext);
   return (
-    <AuthContextProvider>
+    
+    <div>
       <Switch>
         <Route path="/homepage">
           <Homepage></Homepage>
         </Route>
+
         <Route path="/about">
-          <About></About>
+          {authctx.isLogged ? (
+            <About></About>
+          ) : (
+            <Redirect to="/auth"></Redirect>
+          )}
         </Route>
         <Route path="/contact">
           <Contact></Contact>
         </Route>
+        <Route path="/auth">
+          <Login></Login>
+        </Route>
+        {/* {authctx.isLogged && <Route path="/shop">
+          <Shop></Shop>
+        </Route>} */}
+        
 
         <Route path="/shop" exact>
-          <Shop></Shop>
+          {authctx.isLogged ? <Shop></Shop> : <Redirect to="/auth"></Redirect>}
         </Route>
 
         <Route path="/shop/:productid">
-          <ShopItems></ShopItems>
-        </Route>
-
-        <Route path="/auth">
-          <Login></Login>
+          {authctx.isLogged?<ShopItems></ShopItems>:<Redirect to="/auth"></Redirect>}
         </Route>
 
         <Route path="/">
@@ -43,7 +52,8 @@ function App() {
         </Route>
       </Switch>
       <DataReciever></DataReciever>
-    </AuthContextProvider>
+      </div>
+      
   );
 }
 

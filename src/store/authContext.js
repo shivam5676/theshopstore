@@ -2,10 +2,10 @@ import { createContext } from "react"
 
 const AuthContext=createContext(
 {
-    addEmail:(emaildata)=>{},
-    token:"",
-    isLogged:"",
-    addToken:(token)=>{},
-    removeItem:()=>{}
+    // addEmail:(em
+    // token:"",
+    // isLogged:"",
+    // addToken:(token)=>{},
+    // removeItem:()=>{}
 })
 export default AuthContext;

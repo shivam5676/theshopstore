@@ -4,10 +4,14 @@ import AuthContext from "./authContext";
 const AuthContextProvider = (props) => {
   const [isLoggedin, setIsloggedin] = useState(localStorage.getItem("e-user"));
 
+  console.log(isLoggedin)
+
   const addTokenHandler = (token) => {
     setIsloggedin(true);
 
     localStorage.setItem("e-user", token);
+    console.log("auth token")
+    console.log(isLoggedin)
   };
   const removeTokenHandler = () => {
     setIsloggedin(false);

@@ -6,12 +6,6 @@ import axios from "axios";
 
 const Cart = (props) => {
   const ctx = useContext(CartContext);
-  const email = localStorage.getItem("userEmail");
-  const emailupdate = email.replace("@","").replace(".", "");
-console.log(emailupdate)
-
-  
-
 
   const newitem =  ctx.items.map((cartitem) => (
     <div key={cartitem.id} style={{ display: "flex" }}>
