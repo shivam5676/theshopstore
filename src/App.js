@@ -10,6 +10,7 @@ import Login from "./components/Login/Login";
 import AuthContextProvider from "./store/authContextProvider";
 import AuthContext from "./store/authContext";
 import { useContext } from "react";
+import DataReciever from "./components/dataReciever";
 function App() {
   const authctx = useContext(AuthContext);
   return (
@@ -26,7 +27,7 @@ function App() {
         </Route>
 
         <Route path="/shop" exact>
-<Shop></Shop>
+          <Shop></Shop>
         </Route>
 
         <Route path="/shop/:productid">
@@ -36,12 +37,12 @@ function App() {
         <Route path="/auth">
           <Login></Login>
         </Route>
-       
 
         <Route path="/">
           <Home></Home>
         </Route>
       </Switch>
+      <DataReciever></DataReciever>
     </AuthContextProvider>
   );
 }

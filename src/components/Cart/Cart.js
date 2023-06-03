@@ -1,12 +1,19 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import CartPrint from "../Cart/CartPrint";
 import CartContext from "../../store/CartContext";
 import { Button, Card } from "react-bootstrap";
+import axios from "axios";
 
 const Cart = (props) => {
   const ctx = useContext(CartContext);
+  const email = localStorage.getItem("userEmail");
+  const emailupdate = email.replace("@","").replace(".", "");
+console.log(emailupdate)
 
-  const newitem = ctx.items.map((cartitem) => (
+  
+
+
+  const newitem =  ctx.items.map((cartitem) => (
     <div key={cartitem.id} style={{ display: "flex" }}>
       <img
         src={cartitem.image}
@@ -24,7 +31,9 @@ const Cart = (props) => {
         <Button>remove</Button>
       </div>
     </div>
-  ));
+  ))
+  
+ 
   return (
     <Fragment>
       {" "}

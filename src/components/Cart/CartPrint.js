@@ -6,7 +6,7 @@ const CartPrint = (props) => {
   const ctx = useContext(CartContext);
   const totalAmount = `$${ctx.totalAmount.toFixed(2)}`;
   return (
-    <div>
+    <div >
       <h1 style={{ textAlign: "center", marginTop: "50px" }}>CART</h1>
       <div style={{ marginLeft:"300px",marginRight:"300px"}}>
         <hr style={{ height:"2px", backgroundColor:"red" }} />

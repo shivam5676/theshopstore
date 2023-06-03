@@ -43,6 +43,8 @@ const Product = () => {
     },
   ];
 
+  
+
   return (
     <div>
       {productsArr.map((product) => (

@@ -33,8 +33,9 @@ const Login = () => {
         }
       })
       .then((data) => {
-     
+        localStorage.setItem("userEmail",emailRef.current.value)
         authCtx.addToken(data.idToken)
+      
       })
       .catch((err) => {
         console.log(err);
